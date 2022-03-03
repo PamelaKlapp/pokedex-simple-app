@@ -4,3 +4,11 @@ let pokemonList= [
   {name: 'Jynx' , height: 1.4 , typeList: ["psychic", "ice"] },
   {name: 'Umbreon' , height: 1 , typeList: ["dark"] },
 ];
+
+for (let i= 0; i < pokemonList.length; i++){
+  if(pokemonList[i].height > 1.2){
+  document.write( pokemonList[i].name + " (height: " + pokemonList[i].height + ") " + " THIS IS THE BIGGEST ONE ");
+} else { document.write(pokemonList[i].name + " (height: " + pokemonList[i].height + ") ");
+};
+}
+
