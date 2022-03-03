@@ -7,8 +7,8 @@ let pokemonList= [
 
 for (let i= 0; i < pokemonList.length; i++){
   if(pokemonList[i].height > 1.2){
-  document.write( pokemonList[i].name + " (height: " + pokemonList[i].height + ") " + " THIS IS THE BIGGEST ONE ");
-} else { document.write(pokemonList[i].name + " (height: " + pokemonList[i].height + ") ");
+  document.write('<p class="biggest_pokemon">' + pokemonList[i].name + " (height: " + pokemonList[i].height + ") " + " THIS IS THE BIGGEST ONE " +'</p>');
+} else { '<p class="pokemon">' + document.write(pokemonList[i].name + " (height: " + pokemonList[i].height + ") "+ '</p>');
 };
 }
 
