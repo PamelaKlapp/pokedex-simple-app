@@ -1,6 +1,6 @@
 let pokemonList= [
-  {name:'Pidgeotto', height: 1.1 , type:["flying", "normal"]},
-  {name:'Persian', height: 1 , type:"normal"},
-  {name:'Jynx', height: 1.4 , type:["psychic", "ice"]},
-  {name:'Umbreon', height: 1 , type:"dark"},
+  {name: 'Pidgeotto' , height: 1.1 , typeList: ["flying", "normal"] },
+  {name: 'Persian' , height: 1 , typeList: ["normal"] },
+  {name: 'Jynx' , height: 1.4 , typeList: ["psychic", "ice"] },
+  {name: 'Umbreon' , height: 1 , typeList: ["dark"] },
 ];
