@@ -1,12 +1,8 @@
 .biggest_pokemon {
-  background-color: orange;
+  background-color: rgb(250, 224, 177);
   font-size: 20px;
 }
 
 .pokemon {
-  background-color: blue;
-}
-
-p {
-  background-color: aquamarine;
+  background-color: rgb(194, 194, 251);
 }
