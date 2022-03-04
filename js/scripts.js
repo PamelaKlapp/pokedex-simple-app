@@ -17,7 +17,13 @@ for (let i = 0; i < pokemonList.length; i++) {
         "</p>"
     );
   } else {
-    '<p class="pokemon">' +
-      document.write(pokemonList[i].name + " (height: " + pokemonList[i].height + ") " + "</p>");
+    document.write(
+      '<p class="pokemon">' +
+        pokemonList[i].name +
+        " (height: " +
+        pokemonList[i].height +
+        ") " +
+        "</p>"
+    );
   }
 }
