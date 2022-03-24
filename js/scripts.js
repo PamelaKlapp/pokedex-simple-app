@@ -11,9 +11,18 @@ let pokemonRepository = (function(){
     }  
 
     function add(item){
-      if(typeof item === Object){
-      pokemonList.push(item);
-    }}
+      if(typeof item === "object"){ 
+        let itemProperties = Object.keys(item);
+
+          if(
+            itemProperties.includes("name") &&
+            itemProperties.includes("height") &&
+            itemProperties.includes("typeList")
+          ) {
+            pokemonList.push(item);
+            }
+      }
+    }
 
     return {
       getALL: getALL,
@@ -22,7 +31,7 @@ let pokemonRepository = (function(){
 })();
 
 console.log(pokemonRepository.getALL());
-pokemonRepository.add(1)
+pokemonRepository.add({name: "Pikachu", height: 1, typeList: ["electric"]})
 console.log(pokemonRepository.getALL());
 
 let pokemonList = pokemonRepository.getALL();
