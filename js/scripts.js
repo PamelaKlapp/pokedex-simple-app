@@ -24,10 +24,31 @@ let pokemonRepository = (function(){
       }
     }
 
+      function addListItem(pokemon){
+        let pokemonList = document.querySelector('.pokemon-list');
+        let listItem = document.createElement('li');
+        let button = document.createElement('button');
+        button.innerText = pokemon.name;
+        button.classList.add('pokemon-button'); 
+        listItem.appendChild(button);
+        pokemonList.appendChild(listItem);
+
+        //addEventListener
+        button.addEventListener('click', showDetails)
+      }
+
+        function showDetails(pokemon){
+          console.log(addListItem(pokemon));
+        }
+
     return {
       getALL: getALL,
-      add: add
+      add: add,
+      addListItem: addListItem,
+      showDetails:showDetails
     }
+
+
 })();
 
 console.log(pokemonRepository.getALL());
@@ -60,18 +81,30 @@ let pokemonList = pokemonRepository.getALL();
 // }
 
 pokemonList.forEach(function (pokemon){
-  if (pokemon.height > 1.2 ){
-  document.write(
-    '<p class="biggest_pokemon">' +
-    pokemon.name + " (height: " + 
-    pokemon.height + ") " +
-    " THIS IS THE BIGGEST ONEee " + '</p>'
-    );
-  }
-  else {
-    document.write(
-      '<p class="pokemon">' + pokemon.name + 
-      " (height: " + pokemon.height + 
-      " )" +'</p>')
-  }
+  // if (pokemon.height > 1.2 ){
+  // document.write(
+  //   '<p class="biggest_pokemon">' +
+  //   pokemon.name + " (height: " + 
+  //   pokemon.height + ") " +
+  //   " THIS IS THE BIGGEST ONEee " + '</p>'
+  //   );
+  // }
+  // else {
+  //   document.write(
+  //     '<p class="pokemon">' + pokemon.name + 
+  //     " (height: " + pokemon.height + 
+  //     " )" +'</p>')
+  // }
+  
+  // let pokemonList = document.querySelector('.pokemon-list');
+  // let listItem = document.createElement('li');
+  // let button = document.createElement('button');
+  // button.innerText = pokemon.name;
+  // button.classList.add('pokemon-button'); 
+  // listItem.appendChild(button);
+  // pokemonList.appendChild(listItem);
+
+  pokemonRepository.addListItem(pokemon);
+
 });
+
