@@ -74,6 +74,7 @@ let pokemonRepository = (function(){
       console.error(e);
     });
   }
+
       
   function showModal(pokemon){
     let modalBody = $('.modal-body');
@@ -82,12 +83,17 @@ let pokemonRepository = (function(){
 
     modalTitle.empty();
     modalBody.empty();
-    
+
+    // Access to types of each Pokemon
+    let typesNamesOnly = pokemon.types.map(typeObject =>{
+      return typeObject.type.name
+    });
+
     let nameElement = $('<h1 class="sr-only-focusable">'+ pokemon.name +'</h1>');
     let imageElement = $('<img class="modal-img" style= "width:30%">');
     imageElement.attr("src", pokemon.imageUrl);
     let heightElement = $('<p class="sr-only-focusable">'+ 'Height: ' + pokemon.height + '</p>');
-    let typeElement = $('<p class="sr-only-focusable">' + "Type: " + pokemon.types + '</p>');
+    let typeElement = $('<p class="sr-only-focusable">' + 'Type: ' + typesNamesOnly+ '</p>');
 
     modalTitle.append(nameElement);
     modalBody.append(imageElement);
