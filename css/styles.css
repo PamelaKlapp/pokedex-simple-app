@@ -29,7 +29,7 @@ h1, .pokedex-btn{
   display: block;
 }
 .background{
-  background-image: url(/assets/pokeball-pokemon-svgrepo-com.svg);
+  background-image: url("./../assets/pokeball-pokemon-svgrepo-com.svg");
   background-size: 10%;
 }
 
