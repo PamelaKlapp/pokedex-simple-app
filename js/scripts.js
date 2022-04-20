@@ -90,7 +90,7 @@ let pokemonRepository = (function(){
 
     let nameElement = $('<h1 class="sr-only-focusable">'+ pokemon.name +'</h1>');
     let imageElement = $('<img class="modal-img" style= "width:30%">');
-    imageElement.attr("src", pokemon.imageUrl);
+    imageElement.attr('src', pokemon.imageUrl);
     let heightElement = $('<p class="sr-only-focusable">'+ 'Height: ' + pokemon.height + '</p>');
     let typeElement = $('<p class="sr-only-focusable">' + 'Type: ' + typesNamesOnly+ '</p>');
 
