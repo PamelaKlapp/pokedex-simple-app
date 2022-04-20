@@ -9,12 +9,12 @@ let pokemonRepository = (function(){
 
   function add(item){
     if(
-      typeof item === "object"){ 
+      typeof item === 'object'){ 
       let itemProperties = Object.keys(item);
 
       if(
-        itemProperties.includes("name") &&
-        itemProperties.includes("detailsUrl")
+        itemProperties.includes('name') &&
+        itemProperties.includes('detailsUrl')
       ) {
         pokemonList.push(item);
       }
@@ -34,7 +34,7 @@ let pokemonRepository = (function(){
     pokemonList.appendChild(listItem);
 
     //addEventListener
-    button.addEventListener('click', function(event){
+    button.addEventListener('click', function(){
       showDetails(pokemon);
     });
   }
@@ -79,7 +79,6 @@ let pokemonRepository = (function(){
   function showModal(pokemon){
     let modalBody = $('.modal-body');
     let modalTitle = $('.modal-title');
-    let modalHeader = $('.modal-header');
 
     modalTitle.empty();
     modalBody.empty();
